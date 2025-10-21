@@ -13,12 +13,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "lint": "eslint .",
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
-},
+    "lint": "eslint .",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -44,5 +44,4 @@
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.4.0"
   }
-  
 }
