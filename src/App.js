@@ -4,7 +4,9 @@ function App() {
   return (
     <div>
       <h1>Accessibility Demo</h1>
-      <button>Click me</button> {/* This button is missing an accessible label */}
+      <button>Click me</button> {/* This button actually has accessible text, so it's fine */}
+      <button></button> {/* This button is missing accessible text */}
+      <img src="logo.jpg" /> {/* Missing alt text */}
       <p>This is a demo app to showcase ESLint with accessibility checks.</p>
     </div>
   );
