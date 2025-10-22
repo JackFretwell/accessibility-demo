@@ -21,7 +21,7 @@ export default [
       "jsx-a11y/accessible-emoji": "warn",
       "jsx-a11y/no-noninteractive-element-to-interactive-role": "warn",
       "jsx-a11y/no-noninteractive-tabindex": "warn",
-      // Add more rules as needed
+            // test pull request
     },
     settings: {
       react: {
