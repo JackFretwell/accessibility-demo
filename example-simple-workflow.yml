@@ -1,0 +1,15 @@
+name: Accessibility Check
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  accessibility:
+    uses: YourOrgName/shared-workflows/.github/workflows/reusable-eslint-a11y.yml@main
+    # Optional: customize if needed
+    # with:
+    #   node-version: '20'
+    #   working-directory: './frontend'

@@ -1,0 +1,85 @@
+<template>
+    <lightning-card title="Accessibility Demo" icon-name="utility:accessibility">
+        <div class="slds-p-horizontal_medium">
+            <!-- Accessible heading -->
+            <h1 class="slds-text-heading_large slds-m-bottom_medium">
+                Accessibility Demo for Salesforce Lightning
+            </h1>
+            
+            <!-- Good examples -->
+            <div class="slds-section slds-is-open slds-m-bottom_large">
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Good Examples">
+                        ✅ Good Examples (Accessible)
+                    </span>
+                </h3>
+                <div class="slds-section__content slds-p-around_medium">
+                    <!-- Accessible button with proper label -->
+                    <lightning-button 
+                        label="Click me - I'm accessible!" 
+                        variant="brand"
+                        onclick={handleClick}
+                        class="slds-m-right_small slds-m-bottom_small">
+                    </lightning-button>
+                    
+                    <!-- Image with alt text -->
+                    <div class="slds-m-vertical_medium">
+                        <img 
+                            src="/img/samples/salesforce-logo.png" 
+                            alt="Salesforce Logo" 
+                            class="demo-image" />
+                    </div>
+                    
+                    <!-- Properly labeled form input -->
+                    <div class="slds-form-element slds-m-vertical_medium">
+                        <label class="slds-form-element__label" for="accessible-input">
+                            Your Name (Required)
+                        </label>
+                        <div class="slds-form-element__control">
+                            <input 
+                                type="text" 
+                                id="accessible-input"
+                                class="slds-input" 
+                                placeholder="Enter your name"
+                                aria-required="true" />
+                        </div>
+                    </div>
+                    
+                    <!-- Accessible link with descriptive text -->
+                    <p class="slds-m-vertical_medium">
+                        <a href="https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-accessibility" 
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Learn more about LWC Accessibility on Trailhead
+                        </a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Bad examples for demonstration -->
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_error">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Bad Examples">
+                        ❌ Bad Examples (Will trigger accessibility linting errors)
+                    </span>
+                </h3>
+                <div class="slds-section__content slds-p-around_medium">
+                    <p class="slds-text-body_regular slds-m-bottom_medium">
+                        The following elements demonstrate common accessibility issues:
+                    </p>
+                    
+                    <!-- Include the test accessibility component -->
+                    <c-test-accessibility></c-test-accessibility>
+                </div>
+            </div>
+            
+            <!-- Information section -->
+            <div class="slds-box slds-theme_info slds-m-top_large">
+                <p class="slds-text-body_regular">
+                    This is a demo app to showcase ESLint with accessibility checks in Salesforce Lightning Web Components.
+                    Use <code>npm run lint</code> to check for accessibility violations.
+                </p>
+            </div>
+        </div>
+    </lightning-card>
+</template>
