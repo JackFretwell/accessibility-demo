@@ -1,0 +1,62 @@
+<template>
+    <div class="accessibility-violations">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            Accessibility Violations for Testing
+        </h2>
+        
+        <!-- This should trigger img alt-text violation -->
+        <div class="slds-m-vertical_small">
+            <p class="slds-text-body_small">❌ Image without alt text:</p>
+            <img src="/img/samples/test-image.jpg" class="violation-image" />
+        </div>
+        
+        <!-- This should trigger anchor-has-content violation -->
+        <div class="slds-m-vertical_small">
+            <p class="slds-text-body_small">❌ Empty anchor tag:</p>
+            <a href="https://example.com" class="empty-link"></a>
+        </div>
+        
+        <!-- This should trigger button without accessible label -->
+        <div class="slds-m-vertical_small">
+            <p class="slds-text-body_small">❌ Button without accessible text:</p>
+            <button class="slds-button" onclick={handleEmptyButtonClick}></button>
+        </div>
+        
+        <!-- This should trigger heading-has-content violation -->
+        <div class="slds-m-vertical_small">
+            <p class="slds-text-body_small">❌ Empty heading:</p>
+            <h3 class="slds-text-heading_small empty-heading"></h3>
+        </div>
+        
+        <!-- This should trigger label-has-associated-control violation -->
+        <div class="slds-m-vertical_small">
+            <p class="slds-text-body_small">❌ Label without associated input:</p>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Orphaned Label</label>
+                <input type="text" class="slds-input unassociated-input" />
+            </div>
+        </div>
+        
+        <!-- Interactive element without keyboard support -->
+        <div class="slds-m-vertical_small">
+            <p class="slds-text-body_small">❌ Interactive div without keyboard support:</p>
+            <div class="fake-button" onclick={handleDivClick}>
+                Click me (but I'm not keyboard accessible)
+            </div>
+        </div>
+        
+        <!-- Form without proper labeling -->
+        <div class="slds-m-vertical_small">
+            <p class="slds-text-body_small">❌ Input without proper labeling:</p>
+            <input type="password" class="slds-input" placeholder="Enter password" />
+        </div>
+        
+        <!-- Color-only information -->
+        <div class="slds-m-vertical_small">
+            <p class="slds-text-body_small">❌ Information conveyed by color only:</p>
+            <p>
+                Fields marked in <span class="red-text">red</span> are required.
+            </p>
+        </div>
+    </div>
+</template>
