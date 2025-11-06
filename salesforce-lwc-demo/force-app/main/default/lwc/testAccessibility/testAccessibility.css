@@ -1,0 +1,57 @@
+.accessibility-violations {
+    border: 2px dashed #c23934;
+    padding: 1rem;
+    background-color: #fdf2f2;
+    border-radius: 4px;
+}
+
+.violation-image {
+    max-width: 100px;
+    height: auto;
+}
+
+.empty-link {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #0070d2;
+    margin-left: 8px;
+}
+
+.fake-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0070d2;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    /* This div looks like a button but lacks proper accessibility attributes */
+}
+
+.fake-button:hover {
+    background-color: #005fb2;
+}
+
+.empty-heading {
+    min-height: 20px;
+    background-color: #ddd;
+    /* Visual indication of empty heading */
+}
+
+.unassociated-input {
+    margin-top: 4px;
+}
+
+.red-text {
+    color: #c23934;
+    /* Information conveyed by color only - accessibility violation */
+}
+
+/* Demonstration of insufficient color contrast */
+.low-contrast-text {
+    color: #ccc;
+    background-color: #fff;
+}
+
+/* These styles create visual elements but don't address the underlying
+   accessibility issues in the HTML structure */

@@ -1,0 +1,43 @@
+.demo-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styling for demo sections */
+.slds-section__title {
+    font-weight: bold;
+}
+
+.slds-theme_error .slds-section__title {
+    color: #c23934;
+}
+
+/* Accessible focus indicators */
+.slds-button:focus,
+.slds-input:focus,
+a:focus {
+    outline: 2px solid #0070d2;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .demo-image {
+        border: 2px solid;
+    }
+    
+    .slds-box {
+        border: 1px solid;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
