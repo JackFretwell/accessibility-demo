@@ -18,7 +18,6 @@ export default [
       "jsx-a11y": eslintPluginJsxA11y,
     },
     rules: {
-      // Essential accessibility rules
       "jsx-a11y/alt-text": "error",
       "jsx-a11y/anchor-has-content": "error",
       "jsx-a11y/anchor-is-valid": "error",
@@ -43,7 +42,16 @@ export default [
       "jsx-a11y/role-supports-aria-props": "error",
       "jsx-a11y/scope": "error",
       "jsx-a11y/tabindex-no-positive": "error",
-      // React specific rules
+      "jsx-a11y/html-has-lang": "error",        
+      "jsx-a11y/lang": "error",                
+      "jsx-a11y/autocomplete-valid": "error",     
+      "jsx-a11y/label-has-for": "off",          
+      "jsx-a11y/media-has-caption": "warn",
+      "jsx-a11y/no-access-key": "warn",          
+      "jsx-a11y/no-distracting-elements": "error",
+      "jsx-a11y/aria-activedescendant-has-tabindex": "error",
+      "jsx-a11y/no-aria-hidden-on-focusable": "error",
+      "jsx-a11y/no-interactive-element-to-noninteractive-role": "error",
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
     },
